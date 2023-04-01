@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./dist/bundle.css" />
+
+		<!-- Primary Meta Tags -->
+		<title>Solvify - Solve equations in quick time.</title>
+		<meta name="title" content="Solvify - A lightweight, open-source web app that solves math equations in real-time. It supports a range of equation types." />
+		<meta
+			name="description"
+			content="Solvify is a lightweight, open-source web app for solving math equations. Input algebra, trig, calculus, and more, and get step-by-step solutions in real-time. Fast, responsive, and user-friendly."
+		/>
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://solvify.casperong.eu.org/" />
+		<meta
+			property="og:title"
+			content="Solvify - A lightweight, open-source web app that solves math equations in real-time. It supports a range of equation types."
+		/>
+		<meta
+			property="og:description"
+			content="Solvify is a lightweight, open-source web app for solving math equations. Input algebra, trig, calculus, and more, and get step-by-step solutions in real-time. Fast, responsive, and user-friendly. "
+		/>
+		<meta property="og:image" content="./assets/images/ScreenShot1.png" />
+	</head>
+	<body class="">
+		<div class="app-wrapper center unselectable">
+			<div class="header center">
+				<div class="header-wrapper v-center">
+					<div class="theme-switch">
+						<div class="theme-switcher center">
+							<i class="theme-icon bi bi-moon-stars-fill"></i>
+							<label class="switch">
+								<input
+									type="checkbox"
+									class="theme-checkbox"
+									checked
+								/>
+								<span class="slider"> </span>
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="app-inner">
+				<div class="hero-name">
+					<h1>Solvify</h1>
+				</div>
+				<div class="logo-wrap"></div>
+				<div class="equation-input-box">
+					<div class="input-wrap">
+						<input
+							class="input-text"
+							id="eqn-input"
+							placeholder="math problem here"
+						/>
+					</div>
+					<div class="input-button-wrap"></div>
+				</div>
+				<div class="results-wrap center" id="result-wrapper">
+					<div class="result-inner">
+						<div class="result-top-bar v-center">
+							<div class="group-left v-center">
+								<div
+									class="result-action-btn center"
+									id="close-result"
+								>
+									<i class="bi bi-x-circle"></i>
+								</div>
+								<div
+									class="result-action-btn center copy-button"
+									id="copy-result"
+								>
+									<i class="bi bi-clipboard"></i>
+								</div>
+							</div>
+
+							<div
+								class="result-action-btn center copy-button"
+								id="copy-link"
+							>
+								<i class="bi bi-link-45deg"></i>
+							</div>
+						</div>
+						<div class="result-content center selectable">
+							<div class="lx-output latex-view center">
+								$x = 10 + 15 + \log_{10}\left( 100\right) +
+								\left(10 \cdot 5\right) +
+								\mathrm{sin}\left(90\right)$
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="sub-text">
+					<h6>
+						Type your equation and get a solution.
+					</h6>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+		  jax: ["input/TeX", "output/HTML-CSS"],
+		  extensions: ["tex2jax.js"],
+		  "HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"] },
+		  tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], displayMath: [ ["$$","$$"], ["\\[", "\\]"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno" },
+		  TeX: { noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } } },
+		      showMathMenu: false
+		});
+	</script>
+	<script
+		type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+	></script>
+
+	<script src="./dist/bundle.js"></script>
+</html>
